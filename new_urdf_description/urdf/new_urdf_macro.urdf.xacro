@@ -1,0 +1,996 @@
+<?xml version="1.0" ?>
+<robot name="new_urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:macro name="new_urdf" params="prefix">
+
+<xacro:include filename="$(find new_urdf_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find new_urdf_description)/urdf/new_urdf.trans" />
+<xacro:include filename="$(find new_urdf_description)/urdf/new_urdf.gazebo" />
+<link name="${prefix}base_link"/>
+
+<link name="${prefix}rot_drum_1">
+  <inertial>
+    <origin xyz="0.006595141181089045 0.0008062930880154695 0.01609244168530602" rpy="0 0 0"/>
+    <mass value="0.534099002066937"/>
+    <inertia ixx="0.000316" iyy="0.000664" izz="0.000375" ixy="-3e-06" iyz="-6e-06" ixz="3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_drum_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_drum_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_plate_1">
+  <inertial>
+    <origin xyz="0.002708394794648003 -0.002499999999999919 0.0007844120278446554" rpy="0 0 0"/>
+    <mass value="0.20221307838071736"/>
+    <inertia ixx="0.000119" iyy="0.000186" izz="6.8e-05" ixy="0.0" iyz="-0.0" ixz="-7e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_main_1">
+  <inertial>
+    <origin xyz="0.0014580867894050664 -0.09853555267745306 -0.007038738772662742" rpy="0 0 0"/>
+    <mass value="0.7205153192176857"/>
+    <inertia ixx="0.002864" iyy="0.000613" izz="0.002278" ixy="-1e-06" iyz="-9e-06" ixz="-8.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_main_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_main_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_plate_1_1">
+  <inertial>
+    <origin xyz="0.0310258961746651 -0.0025000000000000022 -0.004182895690199057" rpy="0 0 0"/>
+    <mass value="0.20221307838071736"/>
+    <inertia ixx="0.000119" iyy="0.000186" izz="6.8e-05" ixy="0.0" iyz="-0.0" ixz="-7e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}base_main_1">
+  <inertial>
+    <origin xyz="-0.00434413452952799 0.10024181674679825 -0.013278784959988382" rpy="0 0 0"/>
+    <mass value="0.5920792188696358"/>
+    <inertia ixx="0.002383" iyy="0.000686" izz="0.001726" ixy="-1e-06" iyz="-4e-06" ixz="-9.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_main_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_main_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}base_shaft_1">
+  <inertial>
+    <origin xyz="-0.0369898047297717 -0.009255288886961893 0.00643235222431162" rpy="0 0 0"/>
+    <mass value="0.6273475669585017"/>
+    <inertia ixx="0.000107" iyy="0.000447" izz="0.000441" ixy="0.0" iyz="-0.0" ixz="4.7e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_shaft_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_shaft_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}thigh_1">
+  <inertial>
+    <origin xyz="-0.012576842948794853 0.05859571808256375 -0.03069886412171452" rpy="0 0 0"/>
+    <mass value="2.0117503122692093"/>
+    <inertia ixx="0.010311" iyy="0.002933" izz="0.007583" ixy="0.000461" iyz="0.003344" ixz="-0.000383"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}calf_1">
+  <inertial>
+    <origin xyz="-0.018152642884910614 -0.03584405269634906 -0.060168517617180395" rpy="0 0 0"/>
+    <mass value="2.6333324417801576"/>
+    <inertia ixx="0.018386" iyy="0.013694" izz="0.005402" ixy="-0.001032" iyz="-0.007329" ixz="-0.001863"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/calf_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/calf_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}rot_drum_2">
+  <inertial>
+    <origin xyz="0.008558348181317538 -0.0008062930880105013 0.015140069349750748" rpy="0 0 0"/>
+    <mass value="0.5340990020669371"/>
+    <inertia ixx="0.000324" iyy="0.000664" izz="0.000367" ixy="4e-06" iyz="6e-06" ixz="3.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_drum_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_drum_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_plate_2">
+  <inertial>
+    <origin xyz="0.002737113335510133 0.0024999999999999467 0.0006794658808217391" rpy="0 0 0"/>
+    <mass value="0.20221307838071736"/>
+    <inertia ixx="0.000118" iyy="0.000186" izz="6.9e-05" ixy="0.0" iyz="0.0" ixz="-9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_main_2">
+  <inertial>
+    <origin xyz="0.001208304992320941 0.10098444732254735 -0.0069694074860759125" rpy="0 0 0"/>
+    <mass value="0.7205153192176857"/>
+    <inertia ixx="0.002856" iyy="0.000613" izz="0.002286" ixy="-2e-06" iyz="-8e-06" ixz="-0.000107"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_main_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_main_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_plate_1_2">
+  <inertial>
+    <origin xyz="0.030843200081932767 0.0024999999999998357 -0.005365945237554279" rpy="0 0 0"/>
+    <mass value="0.20221307838071736"/>
+    <inertia ixx="0.000118" iyy="0.000186" izz="6.9e-05" ixy="0.0" iyz="0.0" ixz="-9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_1_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}base_main_2">
+  <inertial>
+    <origin xyz="-0.004848752551805349 -0.09927863554464098 -0.013103160539663622" rpy="0 0 0"/>
+    <mass value="0.5920792188696358"/>
+    <inertia ixx="0.002376" iyy="0.000686" izz="0.001734" ixy="-1e-06" iyz="-4e-06" ixz="-0.000117"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_main_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_main_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}base_shaft_2">
+  <inertial>
+    <origin xyz="-0.036716551133344585 -0.009254741178401693 0.007841356504155413" rpy="0 0 0"/>
+    <mass value="0.6273475669585017"/>
+    <inertia ixx="0.000111" iyy="0.000447" izz="0.000437" ixy="0.0" iyz="-0.0" ixz="5.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_shaft_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_shaft_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}rot_shaft_2">
+  <inertial>
+    <origin xyz="0.008863417163396711 0.007148533918079181 -0.0015631269516116764" rpy="0 0 0"/>
+    <mass value="0.07237182970087952"/>
+    <inertia ixx="5e-06" iyy="8e-06" izz="5e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_shaft_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_shaft_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}thigh_2">
+  <inertial>
+    <origin xyz="-0.015540321325063569 0.05157995817188643 -0.04039953745872187" rpy="0 0 0"/>
+    <mass value="2.0117503122692093"/>
+    <inertia ixx="0.010236" iyy="0.004329" izz="0.006262" ixy="0.000693" iyz="0.003922" ixz="-0.000726"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/thigh_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/thigh_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}calf_2">
+  <inertial>
+    <origin xyz="-0.020439381734047385 -0.03584481937986694 -0.059430080151550185" rpy="0 0 0"/>
+    <mass value="2.6333324417801576"/>
+    <inertia ixx="0.018225" iyy="0.013694" izz="0.005563" ixy="-0.001312" iyz="-0.007284" ixz="-0.002354"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/calf_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/calf_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}rot_drum_3">
+  <inertial>
+    <origin xyz="-0.004855516233440868 0.0008062930880103902 0.01669994751728042" rpy="0 0 0"/>
+    <mass value="0.5340990020669371"/>
+    <inertia ixx="0.00031" iyy="0.000664" izz="0.000381" ixy="3e-06" iyz="-7e-06" ixz="-2.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_drum_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_drum_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_plate_3">
+  <inertial>
+    <origin xyz="-0.016339644485824187 -0.00250000000000003 0.008448554472465605" rpy="0 0 0"/>
+    <mass value="0.20221307838071736"/>
+    <inertia ixx="0.000119" iyy="0.000186" izz="6.7e-05" ixy="0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_main_3">
+  <inertial>
+    <origin xyz="-0.0021947060394869045 -0.09853555267745309 -0.006845036644816907" rpy="0 0 0"/>
+    <mass value="0.7205153192176857"/>
+    <inertia ixx="0.002875" iyy="0.000613" izz="0.002267" ixy="0.0" iyz="-9e-06" ixz="2.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_main_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_main_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_plate_1_3">
+  <inertial>
+    <origin xyz="-0.03129497179242717 -0.002500000000000724 -0.0008748237084668098" rpy="0 0 0"/>
+    <mass value="0.20221307838071736"/>
+    <inertia ixx="0.000119" iyy="0.000186" izz="6.7e-05" ixy="0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_1_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_1_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}base_main_3">
+  <inertial>
+    <origin xyz="0.002914694677280852 0.10024172653624852 -0.013663827657363473" rpy="0 0 0"/>
+    <mass value="0.5920605456405896"/>
+    <inertia ixx="0.002395" iyy="0.000686" izz="0.001714" ixy="0.0" iyz="-4e-06" ixz="2.1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_main_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_main_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}thigh_3">
+  <inertial>
+    <origin xyz="0.009227792314302027 0.059123297703001565 -0.030876797054948328" rpy="0 0 0"/>
+    <mass value="2.0117503122692093"/>
+    <inertia ixx="0.010362" iyy="0.002822" izz="0.007644" ixy="-0.000102" iyz="0.003296" ixz="8.4e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/thigh_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/thigh_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}calf_3">
+  <inertial>
+    <origin xyz="0.011559566430424384 -0.04208392180745858 -0.05770470930128216" rpy="0 0 0"/>
+    <mass value="2.6333324417801576"/>
+    <inertia ixx="0.018634" iyy="0.012068" izz="0.006779" ixy="0.000277" iyz="-0.008122" ixz="0.000402"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/calf_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/calf_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}rot_drum_4">
+  <inertial>
+    <origin xyz="-0.007205853629824163 -0.0008062930880154973 0.01582828692908038" rpy="0 0 0"/>
+    <mass value="0.534099002066937"/>
+    <inertia ixx="0.000318" iyy="0.000664" izz="0.000373" ixy="-4e-06" iyz="6e-06" ixz="-3.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_drum_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_drum_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_plate_4">
+  <inertial>
+    <origin xyz="-0.017384724659652878 0.00249999999999978 0.006011651054767017" rpy="0 0 0"/>
+    <mass value="0.20221307838071736"/>
+    <inertia ixx="0.000118" iyy="0.000186" izz="6.9e-05" ixy="0.0" iyz="0.0" ixz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}base_shaft_3">
+  <inertial>
+    <origin xyz="0.03746582860013428 -0.009267974283229535 0.0023904056381727976" rpy="0 0 0"/>
+    <mass value="0.6273475669585017"/>
+    <inertia ixx="0.000101" iyy="0.000447" izz="0.000447" ixy="-0.0" iyz="-0.0" ixz="-1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_shaft_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_shaft_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_main_4">
+  <inertial>
+    <origin xyz="-0.001208916316463804 0.10098444732254674 -0.006969222312131151" rpy="0 0 0"/>
+    <mass value="0.7205153192176857"/>
+    <inertia ixx="0.002856" iyy="0.000613" izz="0.002286" ixy="2e-06" iyz="-8e-06" ixz="0.000107"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_main_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_main_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_plate_1_4">
+  <inertial>
+    <origin xyz="-0.03084381140607581 0.0024999999999998357 -0.00536576006361042" rpy="0 0 0"/>
+    <mass value="0.20221307838071736"/>
+    <inertia ixx="0.000118" iyy="0.000186" izz="6.9e-05" ixy="-0.0" iyz="-0.0" ixz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_1_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/side_plate_1_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}base_main_4">
+  <inertial>
+    <origin xyz="0.004849128338999503 -0.09927872575519128 -0.013102901896366134" rpy="0 0 0"/>
+    <mass value="0.5920605456405896"/>
+    <inertia ixx="0.002375" iyy="0.000686" izz="0.001734" ixy="1e-06" iyz="-4e-06" ixz="0.000117"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_main_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_main_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}base_shaft_4">
+  <inertial>
+    <origin xyz="0.03673261535308371 -0.00926742673059705 0.007752641251068948" rpy="0 0 0"/>
+    <mass value="0.6273475669585017"/>
+    <inertia ixx="0.000111" iyy="0.000447" izz="0.000437" ixy="-0.0" iyz="-0.0" ixz="-5.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_shaft_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/base_shaft_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}thigh_4">
+  <inertial>
+    <origin xyz="0.017723408333648383 0.03787092933160077 -0.05277979016600094" rpy="0 0 0"/>
+    <mass value="2.0117503122692093"/>
+    <inertia ixx="0.010168" iyy="0.006577" izz="0.004082" ixy="-0.000671" iyz="0.003797" ixz="0.00111"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/thigh_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/thigh_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}calf_4">
+  <inertial>
+    <origin xyz="0.018307613349416163 -0.05156090808917707 -0.047337031030741314" rpy="0 0 0"/>
+    <mass value="2.6333324417801576"/>
+    <inertia ixx="0.018366" iyy="0.009115" izz="0.010001" ixy="0.001521" iyz="-0.008406" ixz="0.001562"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/calf_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/calf_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}rot_shaft_4">
+  <inertial>
+    <origin xyz="-0.008863028487243144 0.007148533918079181 -0.0015629417777756477" rpy="0 0 0"/>
+    <mass value="0.07237182970087952"/>
+    <inertia ixx="5e-06" iyy="8e-06" izz="5e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_shaft_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_shaft_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}rot_shaft_3">
+  <inertial>
+    <origin xyz="-0.00899578224834345 -0.007148533918079958 -0.00027259733771876904" rpy="0 0 0"/>
+    <mass value="0.07237182970087952"/>
+    <inertia ixx="5e-06" iyy="8e-06" izz="5e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_shaft_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_shaft_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}rot_shaft_1">
+  <inertial>
+    <origin xyz="0.008916958289913818 -0.007148533918079403 -0.0012223848232029016" rpy="0 0 0"/>
+    <mass value="0.07237182970087952"/>
+    <inertia ixx="5e-06" iyy="8e-06" izz="5e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_shaft_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="new_urdf_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://new_urdf_description/meshes/rot_shaft_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="${prefix}Revolute 1" type="continuous">
+  <origin xyz="-0.114204 -0.128 0.105885" rpy="0 0 0"/>
+  <parent link="${prefix}base_link"/>
+  <child link="${prefix}rot_drum_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="${prefix}Rigid 2" type="fixed">
+  <origin xyz="0.005417 -0.007 0.007187" rpy="0 0 0"/>
+  <parent link="${prefix}rot_drum_1"/>
+  <child link="${prefix}side_plate_1"/>
+</joint>
+
+<joint name="${prefix}Rigid 3" type="fixed">
+  <origin xyz="-0.028318 -0.005 0.004967" rpy="0 0 0"/>
+  <parent link="${prefix}side_plate_1"/>
+  <child link="${prefix}side_main_1"/>
+</joint>
+
+<joint name="${prefix}Rigid 4" type="fixed">
+  <origin xyz="-1.6e-05 -0.19952 -0.00012" rpy="0 0 0"/>
+  <parent link="${prefix}side_main_1"/>
+  <child link="${prefix}side_plate_1_1"/>
+</joint>
+
+<joint name="${prefix}Rigid 5" type="fixed">
+  <origin xyz="0.06192 0.0 -0.008492" rpy="0 0 0"/>
+  <parent link="${prefix}side_plate_1_1"/>
+  <child link="${prefix}base_main_1"/>
+</joint>
+
+<joint name="${prefix}Rigid 6" type="fixed">
+  <origin xyz="-0.011945 0.109731 -0.050303" rpy="0 0 0"/>
+  <parent link="${prefix}base_main_1"/>
+  <child link="${prefix}base_shaft_1"/>
+</joint>
+
+<joint name="${prefix}Revolute 7" type="continuous">
+  <origin xyz="-0.033997 -0.009255 0.006022" rpy="0 0 0"/>
+  <parent link="${prefix}base_shaft_1"/>
+  <child link="${prefix}thigh_1"/>
+  <axis xyz="-0.990727 0.0 0.135865"/>
+</joint>
+
+<joint name="${prefix}Revolute 8" type="continuous">
+  <origin xyz="-0.027897 0.159191 -0.078304" rpy="0 0 0"/>
+  <parent link="${prefix}thigh_1"/>
+  <child link="${prefix}calf_1"/>
+  <axis xyz="-0.990727 0.0 0.135865"/>
+</joint>
+
+<joint name="${prefix}Revolute 9" type="continuous">
+  <origin xyz="-0.114897 0.128 0.105794" rpy="0 0 0"/>
+  <parent link="${prefix}base_link"/>
+  <child link="${prefix}rot_drum_2"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="${prefix}Rigid 10" type="fixed">
+  <origin xyz="0.006274 0.007 0.006453" rpy="0 0 0"/>
+  <parent link="${prefix}rot_drum_2"/>
+  <child link="${prefix}side_plate_2"/>
+</joint>
+
+<joint name="${prefix}Rigid 11" type="fixed">
+  <origin xyz="-0.028106 0.005 0.006045" rpy="0 0 0"/>
+  <parent link="${prefix}side_plate_2"/>
+  <child link="${prefix}side_main_2"/>
+</joint>
+
+<joint name="${prefix}Rigid 13" type="fixed">
+  <origin xyz="2.1e-05 0.19952 0.00012" rpy="0 0 0"/>
+  <parent link="${prefix}side_main_2"/>
+  <child link="${prefix}side_plate_1_2"/>
+</joint>
+
+<joint name="${prefix}Rigid 14" type="fixed">
+  <origin xyz="0.06155 0.0 -0.010853" rpy="0 0 0"/>
+  <parent link="${prefix}side_plate_1_2"/>
+  <child link="${prefix}base_main_2"/>
+</joint>
+
+<joint name="${prefix}Rigid 15" type="fixed">
+  <origin xyz="-0.01386 -0.08979 -0.049809" rpy="0 0 0"/>
+  <parent link="${prefix}base_main_2"/>
+  <child link="${prefix}base_shaft_2"/>
+</joint>
+
+<joint name="${prefix}Rigid 16" type="fixed">
+  <origin xyz="0.013458 0.005 -0.011377" rpy="0 0 0"/>
+  <parent link="${prefix}side_plate_1_2"/>
+  <child link="${prefix}rot_shaft_2"/>
+</joint>
+
+<joint name="${prefix}Revolute 17" type="continuous">
+  <origin xyz="-0.033742 -0.009255 0.007317" rpy="0 0 0"/>
+  <parent link="${prefix}base_shaft_2"/>
+  <child link="${prefix}thigh_2"/>
+  <axis xyz="-0.984808 -0.0 0.173648"/>
+</joint>
+
+<joint name="${prefix}Revolute 18" type="continuous">
+  <origin xyz="-0.035777 0.141231 -0.105004" rpy="0 0 0"/>
+  <parent link="${prefix}thigh_2"/>
+  <child link="${prefix}calf_2"/>
+  <axis xyz="0.984808 0.0 -0.173648"/>
+</joint>
+
+<joint name="${prefix}Revolute 19" type="continuous">
+  <origin xyz="0.114897 -0.128 0.105794" rpy="0 0 0"/>
+  <parent link="${prefix}base_link"/>
+  <child link="${prefix}rot_drum_3"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="${prefix}Rigid 20" type="fixed">
+  <origin xyz="0.008998 -0.007 0.000146" rpy="0 0 0"/>
+  <parent link="${prefix}rot_drum_3"/>
+  <child link="${prefix}side_plate_3"/>
+</joint>
+
+<joint name="${prefix}Rigid 21" type="fixed">
+  <origin xyz="0.014955 -0.005 0.009324" rpy="0 0 0"/>
+  <parent link="${prefix}side_plate_3"/>
+  <child link="${prefix}side_main_3"/>
+</joint>
+
+<joint name="${prefix}Rigid 22" type="fixed">
+  <origin xyz="4e-06 -0.19952 -0.000122" rpy="0 0 0"/>
+  <parent link="${prefix}side_main_3"/>
+  <child link="${prefix}side_plate_1_3"/>
+</joint>
+
+<joint name="${prefix}Rigid 23" type="fixed">
+  <origin xyz="-0.062472 0.0 -0.00189" rpy="0 0 0"/>
+  <parent link="${prefix}side_plate_1_3"/>
+  <child link="${prefix}base_main_3"/>
+</joint>
+
+<joint name="${prefix}Revolute 25" type="continuous">
+  <origin xyz="0.034446 -0.009268 0.002299" rpy="0 0 0"/>
+  <parent link="${prefix}base_shaft_3"/>
+  <child link="${prefix}thigh_3"/>
+  <axis xyz="0.999543 -0.0 0.030244"/>
+</joint>
+
+<joint name="${prefix}Revolute 26" type="continuous">
+  <origin xyz="0.019373 0.160526 -0.078154" rpy="0 0 0"/>
+  <parent link="${prefix}thigh_3"/>
+  <child link="${prefix}calf_3"/>
+  <axis xyz="0.999543 -0.0 0.030244"/>
+</joint>
+
+<joint name="${prefix}Revolute 27" type="continuous">
+  <origin xyz="0.115 0.128 0.105785" rpy="0 0 0"/>
+  <parent link="${prefix}base_link"/>
+  <child link="${prefix}rot_drum_4"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="${prefix}Rigid 28" type="fixed">
+  <origin xyz="0.008884 0.007 0.001438" rpy="0 0 0"/>
+  <parent link="${prefix}rot_drum_4"/>
+  <child link="${prefix}side_plate_4"/>
+</joint>
+
+<joint name="${prefix}Rigid 29" type="fixed">
+  <origin xyz="0.006554 0.109731 -0.051284" rpy="0 0 0"/>
+  <parent link="${prefix}base_main_3"/>
+  <child link="${prefix}base_shaft_3"/>
+</joint>
+
+<joint name="${prefix}Rigid 30" type="fixed">
+  <origin xyz="0.013459 0.005 0.011377" rpy="0 0 0"/>
+  <parent link="${prefix}side_plate_4"/>
+  <child link="${prefix}side_main_4"/>
+</joint>
+
+<joint name="${prefix}Rigid 31" type="fixed">
+  <origin xyz="-2.1e-05 0.19952 0.00012" rpy="0 0 0"/>
+  <parent link="${prefix}side_main_4"/>
+  <child link="${prefix}side_plate_1_4"/>
+</joint>
+
+<joint name="${prefix}Rigid 32" type="fixed">
+  <origin xyz="-0.061551 0.0 -0.010853" rpy="0 0 0"/>
+  <parent link="${prefix}side_plate_1_4"/>
+  <child link="${prefix}base_main_4"/>
+</joint>
+
+<joint name="${prefix}Rigid 33" type="fixed">
+  <origin xyz="0.01386 -0.08979 -0.049809" rpy="0 0 0"/>
+  <parent link="${prefix}base_main_4"/>
+  <child link="${prefix}base_shaft_4"/>
+</joint>
+
+<joint name="${prefix}Revolute 34" type="continuous">
+  <origin xyz="0.033758 -0.009267 0.007228" rpy="0 0 0"/>
+  <parent link="${prefix}base_shaft_4"/>
+  <child link="${prefix}thigh_4"/>
+  <axis xyz="0.984808 0.0 0.173648"/>
+</joint>
+
+<joint name="${prefix}Revolute 35" type="continuous">
+  <origin xyz="0.041799 0.105543 -0.139159" rpy="0 0 0"/>
+  <parent link="${prefix}thigh_4"/>
+  <child link="${prefix}calf_4"/>
+  <axis xyz="0.984808 0.0 0.173648"/>
+</joint>
+
+<joint name="${prefix}Rigid 36" type="fixed">
+  <origin xyz="-0.013459 0.005 -0.011377" rpy="0 0 0"/>
+  <parent link="${prefix}side_plate_1_4"/>
+  <child link="${prefix}rot_shaft_4"/>
+</joint>
+
+<joint name="${prefix}Rigid 37" type="fixed">
+  <origin xyz="-0.014955 -0.005 -0.009323" rpy="0 0 0"/>
+  <parent link="${prefix}side_plate_1_3"/>
+  <child link="${prefix}rot_shaft_3"/>
+</joint>
+
+<joint name="${prefix}Rigid 38" type="fixed">
+  <origin xyz="0.013883 -0.005 -0.010855" rpy="0 0 0"/>
+  <parent link="${prefix}side_plate_1_1"/>
+  <child link="${prefix}rot_shaft_1"/>
+</joint>
+
+</xacro:macro>
+</robot>
