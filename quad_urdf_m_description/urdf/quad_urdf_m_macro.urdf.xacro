@@ -1,0 +1,367 @@
+<?xml version="1.0" ?>
+<robot name="quad_urdf_m" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:macro name="quad_urdf_m" params="prefix">
+
+<xacro:include filename="$(find quad_urdf_m_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find quad_urdf_m_description)/urdf/quad_urdf_m.trans" />
+<xacro:include filename="$(find quad_urdf_m_description)/urdf/quad_urdf_m.gazebo" />
+<link name="${prefix}base_link"/>
+  <inertial>
+    <origin xyz="3.973123543716736e-06 -0.002240936923100409 0.14195198745543852" rpy="0 0 0"/>
+    <mass value="5.814447766930824"/>
+    <inertia ixx="0.318884" iyy="0.070095" izz="0.317305" ixy="4e-06" iyz="-0.000787" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}calf_1">
+  <inertial>
+    <origin xyz="-0.00980866048958215 -0.05068994013526948 -0.05068416977583544" rpy="0 0 0"/>
+    <mass value="0.4327387069931724"/>
+    <inertia ixx="0.003064" iyy="0.001548" izz="0.001547" ixy="-6e-06" iyz="-0.001405" ixz="-6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/calf_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_color0"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/calf_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}calf_2">
+  <inertial>
+    <origin xyz="-0.009809010459163853 -0.050689392426707336 -0.05068398384871117" rpy="0 0 0"/>
+    <mass value="0.4327387069931724"/>
+    <inertia ixx="0.003064" iyy="0.001548" izz="0.001547" ixy="-6e-06" iyz="-0.001405" ixz="-6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/calf_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_color0"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/calf_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}calf_3">
+  <inertial>
+    <origin xyz="0.009809348699562181 -0.050684160608745255 -0.05068973967938255" rpy="0 0 0"/>
+    <mass value="0.4327387069931724"/>
+    <inertia ixx="0.003064" iyy="0.001547" izz="0.001548" ixy="6e-06" iyz="-0.001405" ixz="6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/calf_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_color0"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/calf_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}calf_4">
+  <inertial>
+    <origin xyz="0.009808737595895345 -0.05068461290018811 -0.0506899175699735" rpy="0 0 0"/>
+    <mass value="0.4327387069931724"/>
+    <inertia ixx="0.003064" iyy="0.001547" izz="0.001548" ixy="6e-06" iyz="-0.001405" ixz="6e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/calf_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_color0"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/calf_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_main_1">
+  <inertial>
+    <origin xyz="0.0026101376171941415 -0.09358242801175143 -0.004974038885817322" rpy="0 0 0"/>
+    <mass value="0.4473229828075601"/>
+    <inertia ixx="0.002737" iyy="0.000775" izz="0.002577" ixy="-1.7e-05" iyz="-0.000195" ixz="-9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/side_main_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/side_main_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}thigh_1">
+  <inertial>
+    <origin xyz="-0.00828893314318288 0.03882615546064261 -0.05438643496001605" rpy="0 0 0"/>
+    <mass value="0.3305933634174879"/>
+    <inertia ixx="0.001703" iyy="0.001059" izz="0.000661" ixy="0.0" iyz="0.000641" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_color0"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/thigh_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_main_2">
+  <inertial>
+    <origin xyz="0.0034208439151306447 0.09467794764732124 -0.005239559156668114" rpy="0 0 0"/>
+    <mass value="0.4473254782878761"/>
+    <inertia ixx="0.002753" iyy="0.000773" izz="0.002594" ixy="2.8e-05" iyz="0.000191" ixz="-1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/side_main_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/side_main_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}thigh_2">
+  <inertial>
+    <origin xyz="-0.008289283112764556 0.03882670316920406 -0.054386249032891916" rpy="0 0 0"/>
+    <mass value="0.3305933634174879"/>
+    <inertia ixx="0.001703" iyy="0.001059" izz="0.000661" ixy="0.0" iyz="0.000641" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/thigh_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_color0"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/thigh_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_main_3">
+  <inertial>
+    <origin xyz="-0.002701771634714467 -0.09358527342420098 -0.00514782364523185" rpy="0 0 0"/>
+    <mass value="0.4473257361197553"/>
+    <inertia ixx="0.002738" iyy="0.000776" izz="0.002577" ixy="1.6e-05" iyz="-0.000196" ixz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/side_main_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/side_main_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}thigh_3">
+  <inertial>
+    <origin xyz="0.008289621353162815 0.03882646849808927 -0.05438653837448868" rpy="0 0 0"/>
+    <mass value="0.3305933634174879"/>
+    <inertia ixx="0.001703" iyy="0.001059" izz="0.000661" ixy="-0.0" iyz="0.000641" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/thigh_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_color0"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/thigh_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}side_main_4">
+  <inertial>
+    <origin xyz="-0.002701303665991403 0.09467529729772306 -0.004995378231244574" rpy="0 0 0"/>
+    <mass value="0.4473253958421708"/>
+    <inertia ixx="0.002754" iyy="0.000775" izz="0.002594" ixy="-2.1e-05" iyz="0.000193" ixz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/side_main_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/side_main_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="${prefix}thigh_4">
+  <inertial>
+    <origin xyz="0.008289010249495687 0.038826016206648134 -0.054386716265078704" rpy="0 0 0"/>
+    <mass value="0.3305933634174879"/>
+    <inertia ixx="0.001703" iyy="0.001059" izz="0.000661" ixy="-0.0" iyz="0.000641" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/thigh_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="quad_urdf_m_color0"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://quad_urdf_m_description/meshes/thigh_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="${prefix}knee_1" type="continuous">
+  <origin xyz="-0.017 0.108046 -0.142439" rpy="0 0 0"/>
+  <parent link="${prefix}thigh_1"/>
+  <child link="${prefix}calf_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="${prefix}knee_2" type="continuous">
+  <origin xyz="-0.017 0.108046 -0.142439" rpy="0 0 0"/>
+  <parent link="${prefix}thigh_2"/>
+  <child link="${prefix}calf_2"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="${prefix}knee_3" type="continuous">
+  <origin xyz="0.017 0.108046 -0.142439" rpy="0 0 0"/>
+  <parent link="${prefix}thigh_3"/>
+  <child link="${prefix}calf_3"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="${prefix}knee_4" type="continuous">
+  <origin xyz="0.017 0.108046 -0.142439" rpy="0 0 0"/>
+  <parent link="${prefix}thigh_4"/>
+  <child link="${prefix}calf_4"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="${prefix}haa_1" type="continuous">
+  <origin xyz="-0.114204 -0.128 0.105885" rpy="0 0 0"/>
+  <parent link="${prefix}base_link"/>
+  <child link="${prefix}side_main_1"/>
+  <axis xyz="-0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="${prefix}hfe_1" type="continuous">
+  <origin xyz="-0.00134 -0.111044 -0.041304" rpy="0 0 0"/>
+  <parent link="${prefix}side_main_1"/>
+  <child link="${prefix}thigh_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="${prefix}haa_2" type="continuous">
+  <origin xyz="-0.114897 0.128 0.105794" rpy="0 0 0"/>
+  <parent link="${prefix}base_link"/>
+  <child link="${prefix}side_main_2"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="${prefix}hfe_2" type="continuous">
+  <origin xyz="-0.000671 0.112475 -0.041474" rpy="0 0 0"/>
+  <parent link="${prefix}side_main_2"/>
+  <child link="${prefix}thigh_2"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="${prefix}haa_3" type="continuous">
+  <origin xyz="0.114897 -0.128 0.105794" rpy="0 0 0"/>
+  <parent link="${prefix}base_link"/>
+  <child link="${prefix}side_main_3"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="${prefix}hfe_3" type="continuous">
+  <origin xyz="0.001228 -0.111057 -0.041583" rpy="0 0 0"/>
+  <parent link="${prefix}side_main_3"/>
+  <child link="${prefix}thigh_3"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="${prefix}haa_4" type="continuous">
+  <origin xyz="0.115 0.128 0.105785" rpy="0 0 0"/>
+  <parent link="${prefix}base_link"/>
+  <child link="${prefix}side_main_4"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="${prefix}hfe_4" type="continuous">
+  <origin xyz="0.001229 0.112463 -0.04134" rpy="0 0 0"/>
+  <parent link="${prefix}side_main_4"/>
+  <child link="${prefix}thigh_4"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+</xacro:macro>
+</robot>
