@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find simple_urdf_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="simple_urdf" args="haa_3_position_controller haa_4_position_controller haa_1_position_controller haa_2_position_controller hfe_1_position_controller hfe_2_position_controller hfe_3_position_controller hfe_4_position_controller kfe_4_position_controller kfe_3_position_controller kfe_1_position_controller kfe_2_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/simple_urdf/joint_states"/>
+</node>
+
+</launch>

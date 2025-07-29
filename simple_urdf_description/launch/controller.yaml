@@ -1,0 +1,55 @@
+simple_urdf_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  haa_3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: haa_3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  haa_4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: haa_4
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  haa_1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: haa_1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  haa_2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: haa_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  hfe_1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: hfe_1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  hfe_2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: hfe_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  hfe_3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: hfe_3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  hfe_4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: hfe_4
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  kfe_4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: kfe_4
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  kfe_3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: kfe_3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  kfe_1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: kfe_1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  kfe_2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: kfe_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
